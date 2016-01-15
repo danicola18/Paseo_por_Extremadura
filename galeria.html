@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Galeria</title>
+		<meta name="description" content="">
+		<meta name="author" content="Dani">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="icon" href="images/favicon.ico" type="image/ico">
+		<link rel="stylesheet" href="css/estilosgaleria.css" />
+		<link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">
+		//<![CDATA[
+		var gal = {
+			init : function() {
+				if (!document.getElementById || !document.createElement || !document.appendChild) return false;
+				if (document.getElementById('gallery')) document.getElementById('gallery').id = 'jgal';
+				var li = document.getElementById('jgal').getElementsByTagName('li');
+				li[0].className = 'active';
+				for (i=0; i<li.length; i++) {
+					li[i].style.backgroundImage = 'url(' + li[i].getElementsByTagName('img')[0].src + ')';
+					li[i].title = li[i].getElementsByTagName('img')[0].alt;
+					gal.addEvent(li[i],'click',function() {
+						var im = document.getElementById('jgal').getElementsByTagName('li');
+						for (j=0; j<im.length; j++) {
+							im[j].className = '';
+						}
+						this.className = 'active';
+					});
+				}
+			},
+			addEvent : function(obj, type, fn) {
+				if (obj.addEventListener) {
+					obj.addEventListener(type, fn, false);
+				}
+				else if (obj.attachEvent) {
+					obj["e"+type+fn] = fn;
+					obj[type+fn] = function()
+					 { obj["e"+type+fn]( window.event ); };
+					obj.attachEvent("on"+type, obj[type+fn]);
+				}
+			}
+		};
+		gal.addEvent(window,'load', function() {
+		gal.init();
+		});
+		//]]>
+		</script>
+		<script type="text/javascript">
+			var indice = 0;
+			frases = new Array();
+			frases[0] = "Esta tierra con un horizonte infinito, con su tibios olores, con un cielo que parece recogerlo todo y adonde suben balidos, ladridos, rebuznos, gritos de pastores, mansos ruidos del aire, sones de campanas a lo lejos... Tierra que no la puede recordar ningún trozo de arte por genial que sea.";
+			frases[1] = "Extremadura es tierra fuerte, de paisaje con lontananzas de infinita idealidad. La fuerza se alía aquí al espíritu. Se ha dilatado Extremadura más allá de los mares; por tierras incógnitas han divagado hombres de Extremadura.";
+			frases[2] = "“Generalmente, todo hombre que tiene una idea fija acaba convirtiéndose en extravagante para los demás. Lo mismo da que sea vegetariano, espiritista, teósofo, naturista…”";
+			frases[3] = "“Nuestro mundo —dice— deberá incorporar al proyecto global a los países en vía de desarrollo y los que descarrilaron hace tiempo. Y ello sólo podrán hacerlo si cuentan con las mujeres”";
+
+			indice = Math.random()*(frases.length);
+			indice = Math.floor(indice);
+
+			function rotar() {
+			if (indice == frases.length) {indice = 0;}
+			document.getElementById('rotando').innerHTML = frases[indice];
+			indice++;
+			setTimeout('rotar();',5000);
+			}
+		</script>
+		<script type="text/javascript">rotar();</script>
+		
+
+
+	</head>
+	<body onload="rotar()" >
+		
+		<header>
+			<div id="titulo">
+				<h1>Un paseo por Extremadura </h1>
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="rutas.html">Rutas</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
+				</ul>
+				<div id="login">
+					<form name="login" action="a.php" method="post">
+						<ul>
+							<li><label for="nombre">Usuario</label></li>
+							<li> <input type="text" name="usuario" id="nombre" size="15" required="required" /></li>
+							<li><label for="contra">Contraseña</label></li>
+							<li> <input type="password" name="contraseña" id="contra" size="15" required="required"/></li>
+						</ul>
+						<ul id="dos">
+							<li><input type="submit" id="sub" name="Aceptar" value="Aceptar" onclick="window.open('index.html')" /></li>
+							<li><a href="formulario.html">Registrarse</a></li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</header>
+		<div class="clear"> </div>	
+		<section>
+			<article id="rutas">
+				<ul class="abanico">
+ 					<li><a href="index.html">INICIO</a></li>
+  					<li><a href="rutas.html">RUTAS</a></li>
+  					<li><a href="galeria.html">GALERIA</a></li>
+  					<li><a href="http://es.wikipedia.org/wiki/Historia_de_Extremadura">HISTORIA</a></li>
+  					<li><a href="mailto:danicola18@hotmail.com">CONTACTA</a></li>
+  					<li><a href="galeria.html">MENU</a></li>
+				</ul>
+				
+				
+			</article>
+				
+			<article id="frases">
+				<h1>Frases Celebres</h1>
+				<div id="rotando"> </div>
+			</article>
+			<div class="clear"> </div>
+				<article id="gale">
+					<h1>Disfruta de las mejores imagenes</h1>
+					<ul id="gallery">
+						<li><img src="images/1.JPG" alt="gal" /></li>
+						<li><img src="images/2.JPG" alt="gal" /></li>
+						<li><img src="images/3.JPG" alt="gal" /></li>
+						<li><img src="images/4.JPG" alt="gal" /></li>
+						<li><img src="images/5.JPG" alt="gal" /></li>
+						<li><img src="images/6.JPG" alt="gal" /></li>
+						<li><img src="images/7.JPG" alt="gal" /></li>
+						<li><img src="images/8.JPG" alt="gal" /></li>
+						<li><img src="images/9.JPG" alt="gal" /></li>
+						<li><img src="images/10.JPG" alt="gal" /></li>
+						<li><img src="images/11.JPG" alt="gal" /></li>
+						<li><img src="images/12.JPG" alt="gal" /></li>
+						<li><img src="images/13.JPG" alt="gal" /></li>
+						<li><img src="images/14.JPG" alt="gal" /></li>
+						<li><img src="images/15.JPG" alt="gal" /></li>
+						<li><img src="images/16.JPG" alt="gal" /></li>
+						<li><img src="images/17.JPG" alt="gal" /></li>
+						<li><img src="images/18.JPG" alt="gal" /></li>
+						<li><img src="images/19.JPG" alt="gal" /></li>
+						<li><img src="images/20.JPG" alt="gal" /></li>
+						<li><img src="images/21.JPG" alt="gal" /></li>
+						<li><img src="images/22.JPG" alt="gal" /></li>
+						<li><img src="images/23.JPG" alt="gal" /></li>
+						<li><img src="images/24.JPG" alt="gal" /></li>
+						<li><img src="images/43.JPG" alt="gal" /></li>
+						<li><img src="images/26.JPG" alt="gal" /></li>
+						<li><img src="images/27.JPG" alt="gal" /></li>
+						<li><img src="images/28.JPG" alt="gal" /></li>
+						<li><img src="images/29.JPG" alt="gal" /></li>
+						<li><img src="images/30.JPG" alt="gal" /></li>
+						<li><img src="images/31.JPG" alt="gal" /></li>
+						<li><img src="images/32.JPG" alt="gal" /></li>
+						<li><img src="images/33.JPG" alt="gal" /></li>
+						<li><img src="images/34.JPG" alt="gal" /></li>
+						<li><img src="images/35.JPG" alt="gal" /></li>
+						<li><img src="images/36.JPG" alt="gal" /></li>
+						<li><img src="images/37.JPG" alt="gal" /></li>
+						<li><img src="images/38.JPG" alt="gal" /></li>
+						<li><img src="images/39.JPG" alt="gal" /></li>
+						<li><img src="images/40.JPG" alt="gal" /></li>
+						<li><img src="images/41.JPG" alt="gal" /></li>
+						<li><img src="images/42.JPG" alt="gal" /></li>
+					</ul>
+			</article>
+			<article id="videos" >
+					<h1>Videos interesantes</h1>
+					<iframe width="420" height="345" src="http://www.youtube.com/embed/F9MAcMwm_-w">
+					</iframe>
+					<iframe width="420" height="345"
+						src="http://www.youtube.com/embed/ztBTK7Q9moQ">
+					</iframe>
+				
+			
+			</article>
+				
+		</section>
+		<footer>
+			
+			<ul class="menured">
+ 			<li>
+ 				<a class="red1"> </a>
+  			<div>
+   				<h5>Para empezar</h5>
+   				<a href="index.html" >Inicio</a>
+   				<a href="rutas.html">Rutas</a>
+   				<a href="galeria.html">Galeria</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red2"> </a>
+  			<div>
+  				 <h5>Información</h5>
+   				<a href="http://ies.tiernogalvan.parla.educa.madrid.org/">Sobre nosotros</a>
+   				<a href="http://upplication.com/inspirate/">Proyectos</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red3"> </a>
+  			<div>
+   				<h5>En redes</h5>
+   				<a href="https://twitter.com/">Twitter</a>
+   				<a href="https://www.facebook.com/">Facebook</a>
+   				<a href="https://www.google.com/">Google+</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red4"> </a>
+  			<div>
+   				<h5>Contacto</h5>
+   				<a href="mailto:danicola18@hotmail.com">eMail</a>
+   				<a href="formulario.html">Formulario</a>
+  				<a href="http://www.plasencia.es/web/">Localización</a>
+  			</div>
+ 			</li>
+			</ul>
+			
+			<div id="barrafija">
+				<h3><a href="mailto:danicola18@hotmail.com">Contacta con nosotros</a></h3>
+			</div>
+			<p>Un paseo por Extremadura &copy; Copyright  by Dani</p>
+		</footer>
+					
+	</body>
+</html>
+		
+	

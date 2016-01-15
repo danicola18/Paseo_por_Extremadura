@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Rutas</title>
+		<meta name="description" content="">
+		<meta name="author" content="Dani">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="icon" href="images/favicon.ico" type="image/ico">
+		<link rel="stylesheet" href="css/estilosruta.css" />
+		<link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js' type='text/javascript'>
+		</script>
+		<script type="text/javascript">//<![CDATA[
+			$(function(){
+    		$('#slider div:gt(0)').hide();
+    		setInterval(function(){
+      		$('#slider div:first-child').fadeOut(0)
+         	.next('div').fadeIn(1000)
+         	.end().appendTo('#slider');}, 4000);
+			});
+			//]]>	
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div id="titulo">
+				<h1>Un paseo por Extremadura </h1>
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="rutas.html">Rutas</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
+					
+				</ul>
+				<div id="login">
+					<form name="login" action="a.php" method="post">
+						<ul>
+							<li><label for="nombre">Usuario</label></li>
+							<li> <input type="text" name="usuario" id="nombre" size="15" required="required" /></li>
+							<li><label for="contra">Contraseña</label></li>
+							<li> <input type="password" name="contraseña" id="contra" size="15" required="required"/></li>
+						</ul>
+						<ul id="dos">
+							<li><input type="submit" id="sub" name="Aceptar" value="Aceptar" onclick="window.open('index.html')" /></li>
+							<li><a href="formulario.html">Registrarse</a></li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</header>
+		<div class="clear"> </div>	
+		<section>
+			<article id="rutas">
+				<ul class="abanico">
+ 					<li><a href="index.html">INICIO</a></li>
+  					<li><a href="rutas.html">RUTAS</a></li>
+  					<li><a href="galeria.html">GALERIA</a></li>
+  					<li><a href="http://es.wikipedia.org/wiki/Historia_de_Extremadura">HISTORIA</a></li>
+  					<li><a href="mailto:danicola18@hotmail.com">CONTACTA</a></li>
+  					<li><a href="galeria.html">MENU</a></li>
+				</ul>
+				
+				
+			</article>
+				<article id="galeria">
+					<div id="slider">
+    				<div><img src="images/10.JPG" alt="foto10"/></div>
+    				<div><img src="images/11.JPG" alt="foto11"/></div>
+    				<div><img src="images/12.JPG" alt="foto12"/></div>
+					</div>
+			
+				</article>
+				<div class="clear"> </div>
+				<article id="lista">
+					<h1>Disfruta de las mejores Rutas</h1>
+					  <ul class="ejemplo">
+    					<li>
+     						<a href="calvitero.html"><img src="images/22.JPG" alt="foto22"/>
+      						<span>Calvitero-Laguna el Trampal <br/>
+      							Desde Béjar debe ascenderse a Candelario y de aquí a la Plataforma del Travieso.<br/>
+      							Desde aquí comienza la excursión a pie.<br/>
+      							Subiendo por un camino marcado con hitos se llega al Calvitero, <br/>
+      							donde se levanta el monumento a la Virgen de El Castañar. <br/>
+      							Tomando dirección sur, en dirección a la Ceja del Trampal,<br/>
+      							desde aquí se tomará el camino que desciende en zig-zag,<br/>
+      							en dirección a las Lagunas del Trampal.
+      						</span></a>
+   	 					</li>
+    					<li>
+      						<a href="cerezo.html"><img src="images/23.JPG" alt="foto23"/>
+      						<span>Cerezo en Flor<br/>
+      							Lo ideal para ver la floración es hacer un recorrido por todos los pueblos que <br/>
+      							componen el Valle del Jerte, así se puede disfrutar de diferentes perspectivas. <br/>
+								Ruta circular por la sierra, en coche: Valdastillas, Piornal, Barrado, Cabrero,<br/>
+								Casas del Castañar, El Torno y Rebollar. <br/>
+								Ruta lineal paralela al río Jerte, siguiendo la N-110: Navaconcejo,<br/>
+								Cabezuela del Valle, Jerte, Tornavacas y Puerto de Tornavacas.
+      						</span></a>
+    					</li>
+    					<li>
+      						<a href="otoño.html"><img src="images/24.JPG" alt="foto24"/>
+     						<span>Otoño Mágico <br/>
+     							
+								Tras la primera subida, hay un prolongado descenso que atraviesa bosques de castaños,<br/>
+								paisaje de prados bordeados por caminos de herradura, la zona más frondosa de nuestro<br/>
+								recorrido,hasta la llegada a Hervás por el puente de la Fuente Chiquita.<br/>
+								Seguimos hacia Gargantilla, atravesando el Puente del Monte, y tras un pequeño tramo<br/>
+								de carretera nos adentramos en el Castañar Gallego y en el Castañar del Duque, para <br/>
+								arribar a la parte alta de Gargantilla, entre huertos de cerezos y ciruelo, <br/>
+								y continúa por una paisaje típico de dehesa, la llegada a Segura de Toro es espectacular.<br/>
+								
+     						</span></a>
+    					</li>
+    					<li>
+      						<a href="hoyamoros.html"><img src="images/25.jpg" alt="foto25"/>
+      						<span>Hoyamoros-Los Hermanitos <br/>
+      							Ruta de montaña por las Sierras de Candelario y Béjar,<br/>
+      							partiendo de la Dehesa de Candelario y subida hacia los Dos Hermanitos,<br/>
+      							y posteriormente a la cumbre de El Torreón.<br/>
+      							La bajada se hace por el circo glaciar de Hoya Moros.
+      						</span></a>
+    					</li>
+    					<li>
+      						<a href="navalperal.html"><img src="images/26.JPG" alt="foto26"/>
+      						<span>Navalperal-Bohoyos<br />
+      						
+      						</span></a>
+    					</li>
+    					<li>
+      						<a href="ovejuela.html"><img src="images/29.JPG" alt="foto29"/>
+      						<span>Ovejuela-Robledillo de Gata<br />
+      							Esta preciosa ruta trascurre por GR10,<br/>
+      							y si bien se puede realizar ida y vuelta la dureza es grande,<br/>
+      							por lo que recomendamos usar un coche escoba y siempre la subida realizarla <br/>
+      							por el valle de Ovejuela, que es mucho más dulce y trascurre por arroyos <br/>
+      							y zonas de sombra que agradeceremos en las horas de calor.
+      						</span></a>
+    					</li>
+    					<li>
+      						<a href="carlos.html"><img src="images/30.JPG" alt="foto30"/>
+      						<span>Carlos V <br/>
+      							Se sale de Tornavacas ascendiendo hasta el collado de las Losas,<br/>
+      							bajamos hasta el Puente Nuevo que atraviesa la Garganta de la Serrá,<br/>
+      							se asciende luego al collado de las Yeguas,<br/>
+      							bajando por la Garganta Yedrón hasta Jarandilla de la Vera. <br/>
+      							El recorrido esta señalado como Pr-cc-1.
+      						</span></a>
+    					</li>
+    					<li>
+      						<a href="ibores.html"><img src="images/31.JPG" alt="foto31"/>
+      						<span>Ruta por los Ibores <br/>
+      								Ribereando desde Guadalupe por el río Guadarranque iniciamos nuestra ruta por <br/>
+      								el río Guadarranque iniciamos nuestra ruta que nos llevará hasta Navatrasierra,<br/> 
+      								e cuyos alrededores se contempla un atractivo paisaje propio de las serranías<br/>
+      								de los Ibores, <br/>
+      								al cual se suma otro encanto más, <br/>
+      								el de estar situada la población entre la sierra de Valdelacasa y la de Altamira.
+							</span></a>
+    					</li>
+    					<li>
+      						<a href="monfrague.html"><img src="images/28.JPG" alt="foto28"/>
+      						<span>Monfrague <br/>
+      								Monfragüe se encuentra aproximadamente en el cen­tro de la provincia de Cáceres, <br/>
+      								en el triángulo que formarían las conocidas ciudades de Plasencia, T rujillo y Cáceres.<br/>
+      								Su eje vertebrador lo constituye el río Tajo a su paso por suaves montañas rodeadas <br/>
+      								de extensas dehesas.<br/>
+   									Monfragüe, con 18.396 hectáreas, fue el primer espacio protegido de Extremadura. <br/>
+   									tras varios años de lucha para evitar que las plantaciones de eucaliptos aterrazaran y <br/>
+   									eliminaran el matorral y bosque autóctono, hábitat de gran cantidad de fauna amenazada.	<br/>	
+      						</span></a>
+    					</li>
+  					</ul>	
+				</article>
+				<article id="circul">
+					<ul class="circulos">
+						<li><a href="calvitero.html"><span>Calvitero</span></a></li>
+						<li><a href="cerezo.html"><span>Cerezo</span></a></li>
+						<li><a href="otoño.html"><span>Otoño</span></a></li>
+						<li><a href="hoyamoros.html"><span>Hoyamoros</span></a></li>
+						<li><a href="navalperal.html"><span>Navalperal</span></a></li>
+						<li><a href="ovejuela.html"><span>Ovejuela</span></a></li>
+						<li><a href="carlos.html"><span>Carlos V</span></a></li>
+						<li><a href="ibores.html"><span>Ibores</span></a></li>
+						<li><a href="monfrague.html"><span>Monfrague</span></a></li>
+						<li><a href="navalperal.html"><span>MENU</span></a></li>
+					</ul>
+				</article>
+
+			</section>
+		
+		
+		
+		<footer>
+			
+			<ul class="menured">
+ 			<li>
+ 				<a class="red1"> </a>
+  			<div>
+   				<h5>Para empezar</h5>
+   				<a href="index.html" >Inicio</a>
+   				<a href="rutas.html">Rutas</a>
+   				<a href="galeria.html">Galeria</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red2"> </a>
+  			<div>
+  				 <h5>Información</h5>
+   				<a href="http://ies.tiernogalvan.parla.educa.madrid.org/">Sobre nosotros</a>
+   				<a href="http://upplication.com/inspirate/">Proyectos</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red3"> </a>
+  			<div>
+   				<h5>En redes</h5>
+   				<a href="https://twitter.com/">Twitter</a>
+   				<a href="https://www.facebook.com/">Facebook</a>
+   				<a href="https://www.google.com/">Google+</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red4"> </a>
+  			<div>
+   				<h5>Contacto</h5>
+   				<a href="mailto:danicola18@hotmail.com">eMail</a>
+   				<a href="formulario.html">Formulario</a>
+  				<a href="http://www.plasencia.es/web/">Localización</a>
+  			</div>
+ 			</li>
+			</ul>
+			
+			<div id="barrafija">
+				<h3><a href="mailto:danicola18@hotmail.com">Contacta con nosotros</a></h3>
+			</div>
+			<p>Un paseo por Extremadura &copy; Copyright  by Dani</p>
+		</footer>
+					
+	</body>
+</html>

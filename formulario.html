@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario</title>
+		<link rel="stylesheet" href="css/estilosform.css" />
+		<link rel="icon" href="images/favicon.ico" type="image/ico">
+		<link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<header>
+			<div id="titulo">
+				<h1>Un paseo por Extremadura </h1>
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="rutas.html">Rutas</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
+					
+				</ul>
+				<div id="login">
+					<form name="login" action="a.php" method="post">
+						<ul>
+							<li><label for="nombre">Usuario</label></li>
+							<li> <input type="text" name="usuario" id="nombre" size="15" required="required" /></li>
+							<li><label for="contra">Contraseña</label></li>
+							<li> <input type="password" name="contraseña" id="contra" size="15" required="required"/></li>
+						</ul>
+						<ul id="dos">
+							<li><input type="submit" id="sub" name="Aceptar" value="Aceptar" onclick="window.open('index.html')" /></li>
+							<li><a href="formulario.html">Registrarse</a></li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</header>
+		<section>
+		<h1>Formulario de registro</h1>
+		<form id="formulario" action="apto2.html" method="post">
+					<fieldset>
+						<legend> Datos Personales</legend>
+							<ul>
+								<li><label for="a">Nombre</label>	<input class="fo" id="a" type="text" name="nombre" size="20" maxlength="30" required="required" placeholder="Escribe tu nombre completo" /></li>
+								<li><label for="c">Apellidos</label>	<input class="fo" id="c" type="tel" name="apellidos" placeholder="Escriba sus apellidos" required="required"/></li>
+								<li><label for="b">Email</label>	<input class="fo" id="b" type="email" name="correo" size="20" maxlength="30" placeholder="ejemplo@dominio.com" required="required"/></li>
+								<li><label for="d">Fecha nac</label>		<input class="fo" id="d" type="text" name="fecha" size="20" maxlength="30" required="required"/></li>
+							</ul>
+					</fieldset>
+					<fieldset>
+							<legend> Datos para logueo </legend>
+								<ul>
+									<li><label for="e">Login</label>	<input class="fo" id="e" type="text" name="login" placeholder="nombre acceso" required="required" /></li>
+									<li><label for="f">Contraseña</label>	<input class="fo" id="f" type="text" name="contraseña" required="required"/></li>
+								</ul>
+					</fieldset>
+							<hr>
+						<ul>
+						<li>	<input type="submit" value="Enviar" name="enviar" onclick="window.open('index.html')"/></li>
+							</ul>
+		</form>
+	</section>
+	
+	<footer>
+			
+			<ul class="menured">
+ 			<li>
+ 				<a class="red1"> </a>
+  			<div>
+   				<h5>Para empezar</h5>
+   				<a href="index.html" >Inicio</a>
+   				<a href="rutas.html">Rutas</a>
+   				<a href="galeria.html">Galeria</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red2"> </a>
+  			<div>
+  				 <h5>Información</h5>
+   				<a href="http://ies.tiernogalvan.parla.educa.madrid.org/">Sobre nosotros</a>
+   				<a href="http://upplication.com/inspirate/">Proyectos</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red3"> </a>
+  			<div>
+   				<h5>En redes</h5>
+   				<a href="https://twitter.com/">Twitter</a>
+   				<a href="https://www.facebook.com/">Facebook</a>
+   				<a href="https://www.google.com/">Google+</a>
+  			</div>
+ 			</li>
+ 			<li>
+  				<a class="red4"> </a>
+  			<div>
+   				<h5>Contacto</h5>
+   				<a href="mailto:danicola18@hotmail.com">eMail</a>
+   				<a href="formulario.html">Formulario</a>
+  				<a href="http://www.plasencia.es/web/">Localización</a>
+  			</div>
+ 			</li>
+			</ul>
+			
+			<div id="barrafija">
+				<h3><a href="mailto:danicola18@hotmail.com">Contacta con nosotros</a></h3>
+			</div>
+			<p>Un paseo por Extremadura &copy; Copyright  by Dani</p>
+		</footer>
+	</body>
+</html>
